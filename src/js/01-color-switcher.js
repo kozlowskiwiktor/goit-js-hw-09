@@ -11,10 +11,12 @@ start.addEventListener('click', () => {
         document.body.style.background = getRandomHexColor();
     }, 1000);
     start.disabled = true;
+    stop.disabled = false;
 });
 
 stop.addEventListener('click', () => {
     clearInterval(timerID);
     console.log(`Lucky You! Your color number is ${getRandomHexColor()}`);
     start.disabled = false;
+    stop.disabled = true;
 });
