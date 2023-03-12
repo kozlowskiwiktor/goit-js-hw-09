@@ -1,0 +1,2 @@
+!function(){var t=document.querySelector("button[data-start]"),e=document.querySelector("button[data-stop]");function n(){return"#".concat(Math.floor(16777215*Math.random()).toString(16))}t.addEventListener("click",(function(){timerID=setInterval((function(){document.body.style.background=n()}),1e3),t.disabled=!0})),e.addEventListener("click",(function(){clearInterval(timerID),console.log("Lucky You! Your color number is ".concat(n())),t.disabled=disabled}))}();
+//# sourceMappingURL=01-color-switcher.31c97625.js.map
