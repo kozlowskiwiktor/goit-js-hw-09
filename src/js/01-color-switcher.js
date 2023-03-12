@@ -6,17 +6,16 @@ let timerID = null;
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
 start.addEventListener('click', () => {
     timerID = setInterval(() => {
-        document.body.style.background = getRandomHexColor();
+        let color = getRandomHexColor();
+        document.body.style.background = color;
     }, 1000);
     start.disabled = true;
-    stop.disabled = false;
 });
 
 stop.addEventListener('click', () => {
     clearInterval(timerID);
-    console.log(`Lucky You! Your color number is ${getRandomHexColor()}`);
     start.disabled = false;
-    stop.disabled = true;
 });
