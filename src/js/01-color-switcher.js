@@ -16,5 +16,5 @@ start.addEventListener('click', () => {
 stop.addEventListener('click', () => {
     clearInterval(timerID);
     console.log(`Lucky You! Your color number is ${getRandomHexColor()}`);
-    start.disabled = disabled;
+    start.disabled = false;
 });
